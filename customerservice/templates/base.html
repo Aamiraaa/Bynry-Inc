@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gas Utility Service</title>
+</head>
+<body>
+  <header>
+    <h1>Gas Utility Service</h1>
+    <nav>
+      <ul>
+        <li><a href="{% url 'submit_service_request' %}">Submit Service Request</a></li>
+        <!-- Add more navigation links here -->
+      </ul>
+    </nav>
+  </header>
+  <main>
+    {% block content %}
+    {% endblock %}
+  </main>
+  <footer>
+    <p>&copy; {{ year }} Gas Utility Service. All rights reserved.</p>
+  </footer>
+</body>
+</html>

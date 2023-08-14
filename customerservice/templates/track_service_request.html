@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Track Service Request</h2>
+  <p><strong>Request ID:</strong> {{ service_request.id }}</p>
+  <p><strong>Customer:</strong> {{ service_request.customer }}</p>
+  <p><strong>Request Type:</strong> {{ service_request.request_type }}</p>
+  <p><strong>Status:</strong> {{ service_request.status }}</p>
+  <p><strong>Submitted:</strong> {{ service_request.submission_time }}</p>
+  {% if service_request.status == 'Resolved' %}
+    <p><strong>Resolved:</strong> {{ service_request.resolution_time }}</p>
+  {% endif %}
+  {% if service_request.attached_files %}
+    <p><a href="{{ service_request.attached_files.url }}" target="_blank">Download Attachment</a></p>
+  {% endif %}
+{% endblock %}
